@@ -1,0 +1,33 @@
+div.bar {
+    display: inline-block;
+    width: 20px;
+    height: 75px;   /* We'll override this later */
+    margin-right: 2px;
+    background-color: teal;
+}
+
+.axes path,
+.axes line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.axes path,
+.axes line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.axes text {
+    font-family: sans-serif;
+    font-size: 12pt;
+}
+
+.chart-series path,
+.chart-series line {
+    fill: none;
+    stroke: black;
+    stroke-width: 2.0
+}

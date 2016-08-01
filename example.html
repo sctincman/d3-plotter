@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>D3 Test</title>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+        <script type="text/javascript" src="chart.js"></script>
+	<link href="example.css" rel="stylesheet">
+    </head>
+    <body>
+	<h1>D3 Test Playground</h1>
+	<div id="d3" style="width:100%"></div>
+    </body>
+    <script type="text/javascript">
+      var data = [];
+      for (var i=0; i<21; i++){
+          data.push([i,i*i]);
+      };
+
+      var dataObj = [{data: data}];
+      var parentSVG = d3.select("#d3").append("svg").attr("class", "chart");
+      var chartUpdate = lineChart(parentSVG, dataObj);
+      chartUpdate();
+    </script>
+</html>
