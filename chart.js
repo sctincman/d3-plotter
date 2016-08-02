@@ -98,9 +98,10 @@ function lineChart(parentSelection, thedata){
 		     d3.max(thedata, function(d) { return d3.max(d.data, function(d) {return d[1]}) } )])
 	    .range([(height), (2*ypad)]); //invert y-axis to right-hand coordinate system
 
-	thedata.forEach(function(dataObject) {
+	thedata.forEach(function(dataObject, index) {
 	    if (!dataObject.group) {
-		dataObject.group = chartGroup.append("g").attr("class", "chart-area");
+		dataObject.group = chartGroup.append("g")
+		    .attr("class", "chart-area chart-series"+index);
 		dataObject.visible = true;
 	    }
 	    //make sure data is sorted by x value (needed by path)

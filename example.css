@@ -28,6 +28,26 @@ div.bar {
 .chart-series path,
 .chart-series line {
     fill: none;
-    stroke: black;
     stroke-width: 2.0
+}
+
+.chart-series0
+{
+    stroke: black;
+    fill: black;
+    color: black;
+}
+
+.chart-series1
+{
+    stroke: red;
+    fill: red;
+    color: red;
+}
+
+.chart-series2
+{
+    stroke: blue;
+    fill: blue;
+    color: blue;
 }

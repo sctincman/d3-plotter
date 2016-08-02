@@ -21,5 +21,16 @@
       var parentSVG = d3.select("#d3").append("svg").attr("class", "chart");
       var chartUpdate = lineChart(parentSVG, dataObj);
       chartUpdate();
+
+      var newdata = [];
+      for (var i=0; i<21; i++){
+          newdata.push([i,i*i*Math.pow(-1, i)]);
+      };
+
+      var dataObj = [{data: data}, {data: newdata}];
+      var parentSVG = d3.select("#d3").append("svg").attr("class", "chart");
+      var chartUpdate = lineChart(parentSVG, dataObj);
+      chartUpdate();
+
     </script>
 </html>
