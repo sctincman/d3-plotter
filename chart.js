@@ -90,10 +90,11 @@ function lineChart(parentSelection, thedata){
 
     return function update(){
 	xScale
-	    .domain([thedata[0].data[0][0], thedata[0].data[thedata[0].data.length-1][0]])
+	    .domain([d3.min(thedata, function(d) { return d3.min(d.data, function(d) {return d[0]}) } ),
+		     d3.max(thedata, function(d) { return d3.max(d.data, function(d) {return d[0]}) } )])
 	    .range([0, (width-(2*xpad))]);
 	yScale
-	    .domain([d3.min(thedata, function(d) { return d3.min(d.data, function(d) {return d[1]}) } ), 
+	    .domain([d3.min(thedata, function(d) { return d3.min(d.data, function(d) {return d[1]}) } ),
 		     d3.max(thedata, function(d) { return d3.max(d.data, function(d) {return d[1]}) } )])
 	    .range([(height), (2*ypad)]); //invert y-axis to right-hand coordinate system
 
